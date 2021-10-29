@@ -34,9 +34,18 @@ const Login = () => {
     borderRadius: "35px",
     left: "40%",
     top: "25%",
-    opacity: "0.5"}}>
-       <div style = {{}}>
-        Logo Here
+    opacity: "0.9"}}>
+       <div style = {{
+         marginTop:"20px",
+         color:"white",
+         height:"90px",
+         fontFamily: "Inter",
+         fontStyle: "normal",
+         fontWeight: 600,
+         fontSize: "32px",
+         lineHeight: "45px"
+       }}>
+        AGH Transport
        </div>
 
        <div style = {{textAlign:"left",marginLeft:"40px"}}>
@@ -44,11 +53,25 @@ const Login = () => {
 fontStyle: "normal",
 fontWeight: 600,
 fontSize: "32px",
-lineHeight: "48px"}}>
+lineHeight: "48px",
+margin:"unset"
+}}>
           Welcome To 
           <br/>
           AGH Transport
         </h2>
+    <p 
+    style = {{
+
+      color:"white",
+      fontFamily: "Inter",
+      fontStyle: "normal",
+      fontWeight: 600,
+      fontSize: "18px",
+      margin:"unset"
+
+    }}
+    >Welcome to AGH Helpdesk Services,<br/> Login here with AGH credentials</p>
        </div>
       <Form onFinish = {(values)=> dispatch(actions.loginRequest({values,history}))} style={{
         padding:"50px"
@@ -57,14 +80,14 @@ lineHeight: "48px"}}>
         name="username"
         rules={[{ required: true, message: 'Please input your username!' }]}
       >
-        <Input style={{padding:"16px 12px"}} />
+        <Input style={{padding:"16px 12px"}} placeholder="username" />
       </Form.Item>
 
       <Form.Item
         name="password"
         rules={[{ required: true, message: 'Please input your password!' }]}
       >
-        <Input.Password style={{padding:"16px 12px"}} />
+        <Input.Password style={{padding:"16px 12px"}} placeholder="password (6 digit at least, case sensitive)" />
       </Form.Item>
 
       <Form.Item>
